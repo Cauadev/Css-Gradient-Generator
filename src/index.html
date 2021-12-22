@@ -7,8 +7,30 @@
     <title>Css Generator</title>
     <link rel="stylesheet" href="./assets/css/home.css">
     <script src="./scripts/home.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
+    <section class="choose-section">
+        <div class="preview"><!--PREVIEW AREA--></div>
+        <div class="choose-container">
+            <div class="colors">
+                <input type="color" value="#ff0000" name="primary-color" data-index="1" class="color-picker" id="primary-color">
+                <input type="color" value="#ff0340" name="second-color" data-index="2" class="color-picker" id="second-color">
+            </div>
+            <button id="add-color">Add</button>
+        </div>
+
+        <div class="code-preview">
+            <div class="code-header">
+                <span id="title-code">Code</span>
+                <div>
+                    Copiar para clipboard
+                    <i class="bi bi-clipboard" id="clipboard"></i>
+                </div>
+            </div>
+            <code id="code-result">Background: linear-gradient(to right, #ff0000, #ff0340)</code>
+        </div>
+    </section>
 
 </body>
 </html>
