@@ -1,0 +1,80 @@
+*{
+    font-family: Roboto;
+}
+
+html,body{
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.choose-section{
+    margin: 30px;
+}
+
+.preview{
+    height: 250px;
+}
+
+.code-preview{
+    background-color: #1d3557;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#title-code{
+    color: rgb(175, 175, 175);
+}
+
+#code-result{
+    margin-top: 20px;
+    color: rgb(255, 255, 255);;
+}
+
+
+.code-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bi-clipboard{
+    font-size: 25px;
+    color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+
+
+
+.choose-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0px 40px 0px;
+}
+
+.choose-container button{
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: #8d99ae;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border: solid 5px hsl(0, 0%, 96%);
+}
+
+.choose-container button:active{
+    background-color: #777e8a;
+}
+
+input[type="color"]{
+    border: none;
+    width: 100px;
+    height: 100px;
+}
+
