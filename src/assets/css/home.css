@@ -30,8 +30,10 @@ html,body{
 }
 
 #code-result{
-    margin-top: 20px;
-    color: rgb(255, 255, 255);;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #16273f;
+    padding: 10px;
 }
 
 
@@ -76,5 +78,21 @@ input[type="color"]{
     border: none;
     width: 100px;
     height: 100px;
+}
+
+
+
+
+.choose-angle{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#angle-value{
+    margin-left: 20px;
+    Background: #cccccc;
+    padding: 10px;
+    font-weight: 600;
+    color: rgb(83, 83, 83);
 }
 

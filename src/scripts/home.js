@@ -9,10 +9,11 @@ let colors = {
     2: second_color.value
 }
 let data_index = 2
+let deg = '100deg'
 
 
 
-preview.style.background = `linear-gradient(to right, ${primary_color.value}, ${second_color.value})`;
+preview.style.background = `linear-gradient(100deg, ${primary_color.value}, ${second_color.value})`;
 
 
 
@@ -31,7 +32,7 @@ function renderPreview(){
     arr.splice((arr.length -1),1)
     result = arr.join('')
 
-    let value = `linear-gradient(to right, ${result})`
+    let value = `linear-gradient(${deg}, ${result})`
     preview.style.background = value
     updateCodeResult(value)
 }
@@ -83,4 +84,19 @@ document.querySelector('#add-color').addEventListener('click', () => {
     addLayer(input.value, data_index);
     renderPreview()
     addEventInPicker(input)
+})
+
+
+document.querySelector('#range-angle').addEventListener('input', (event) => {
+    let angle = event.target.value
+    let result = preview.style.background.split(',')
+    let arr = result[0].split('(')
+    result.splice(0,1)
+    arr.splice(1, 1)
+    arr.push(`${angle}deg`)
+    result = arr.join('(')+","+ result.join(',')
+
+    deg = `${angle}deg`
+    document.querySelector('#angle-value').textContent = deg
+    renderPreview()
 })

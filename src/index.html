@@ -20,15 +20,17 @@
             <button id="add-color">Add</button>
         </div>
 
+        <div class="choose-angle">
+            <input type="range" min="-180" max="180" value="100" id="range-angle">
+            <span id="angle-value">100deg</span>
+        </div>
+
         <div class="code-preview">
             <div class="code-header">
                 <span id="title-code">Code</span>
-                <div>
-                    Copiar para clipboard
                     <i class="bi bi-clipboard" id="clipboard"></i>
-                </div>
             </div>
-            <code id="code-result">Background: linear-gradient(to right, #ff0000, #ff0340)</code>
+            <code id="code-result">Background: linear-gradient(100deg, #ff0000, #ff0340)</code>
         </div>
     </section>
 
