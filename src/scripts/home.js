@@ -41,6 +41,14 @@ function updateCodeResult(value){
     code_result.textContent = "Background: "+value
 }
 
+function removeEvent(element){
+        element.addEventListener('click', () => {
+            let index = element.getAttribute('data-index')
+            delete(colors[index])
+            document.querySelector(`div[data-index='${index}']`).remove()
+            renderPreview()
+        })
+}
 
 function addEventInPicker(element){
         element.addEventListener('input', () => {
@@ -80,7 +88,20 @@ document.querySelector('#add-color').addEventListener('click', () => {
     input.value = "#8d99ae"
     input.setAttribute('data-index', data_index)
 
-    document.querySelector('.colors').appendChild(input)
+    let color_field = document.createElement('div')
+    color_field.classList.add('color-field')
+    color_field.setAttribute('data-index', data_index)
+
+    let remove_button = document.createElement('div')
+    remove_button.classList.add('remove-color')
+    remove_button.setAttribute('data-index', data_index)
+    remove_button.textContent = "X"
+
+    color_field.appendChild(remove_button)
+    color_field.appendChild(input)
+
+    document.querySelector('.colors').appendChild(color_field)
+    removeEvent(remove_button)
     addLayer(input.value, data_index);
     renderPreview()
     addEventInPicker(input)
