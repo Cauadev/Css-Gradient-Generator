@@ -96,3 +96,26 @@ input[type="color"]{
     color: rgb(83, 83, 83);
 }
 
+
+
+
+.colors{
+    display: flex;
+}
+
+
+.color-field{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.remove-color{
+    display: flex;
+    justify-content: center;
+    background-color: #e4e5e6;
+    border: solid 5px hsl(0, 0%, 96%);
+    color: rgb(255, 21, 0);
+    cursor: pointer;
+}
+
